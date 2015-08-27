@@ -1,6 +1,6 @@
 {
   "name": "cordova-build-increment",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Automated build number increment after cordova build for iOS and Android",
   "main": "incrementBuildNum.js",
   "peerDependencies": {
@@ -13,7 +13,7 @@
     "postuninstall": "node scripts/uninstall.js"
   },
   "author": "Charles Ring",
-  "license": "ISC",
+  "license": "MIT",
   "directories": {
     "test": "test"
   },
