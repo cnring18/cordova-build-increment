@@ -9,7 +9,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "test/test.js"
+    "postinstall": "node scripts/install.js",
+    "postuninstall": "node scripts/uninstall.js"
   },
   "author": "Charles Ring",
   "license": "ISC"
