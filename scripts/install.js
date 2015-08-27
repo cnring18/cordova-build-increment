@@ -11,7 +11,6 @@
 //				incrementBuildNum.js
 //				/scripts
 //					install.js
-//					uninstall.js
 
 //After
 // ./proj
