@@ -24,7 +24,9 @@ Android:
 
 iOS:
 
-'X' 'X.X' 'X.X.X'
+'X' 
+'X.X' 
+'X.X.X'
 
 
 ** Leading zeros will be removed
