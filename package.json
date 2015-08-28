@@ -30,6 +30,8 @@
     "xml2js": "^0.4.10"
   },
   "keywords": [
-    "cordova"
+    "cordova",
+    "hooks",
+    "hook"
   ]
 }
