@@ -39,7 +39,7 @@ if(!fs.existsSync(writePath)) {
 var buildIncrementPath = path.join(cwd, 'incrementBuildNum.js');
 
 var incrementFile = fs.readFileSync(buildIncrementPath);
-console.log('incrementFile: ', incrementFile)
+//console.log('incrementFile: ', incrementFile)
 var incrementFilePath = path.join(writePath, 'incrementBuildNum.js')
 
 console.log('Creating increment hook: ', incrementFilePath)
