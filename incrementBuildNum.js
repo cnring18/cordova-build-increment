@@ -4,9 +4,6 @@ module.exports = function(context) {
         path = require('path'),
         xml2js = require('xml2js');
 
-    // hook configuration
-    var isRelease = true; // by default this hook is always enabled, see the line below on how to execute it only for release
-    //var isRelease = (cliCommand.indexOf('--release') > -1);
     var platforms = context.opts.platforms,
         cliCommand = context.cmdLine,
         fileName = 'config.xml',
@@ -16,6 +13,9 @@ module.exports = function(context) {
         platformName,
         needRewrite = false,
         finishMessage = [];
+    // hook configuration
+    var isRelease = true; // by default this hook is always enabled, see the line below on how to execute it only for release
+    //var isRelease = (cliCommand.indexOf('--release') > -1);
 
     if (!isRelease) {
         console.log('Set to increment build number only for release');

@@ -14,6 +14,12 @@ Then add the following to your app's config.xml file:
 
 Script is designed to increment the 'android-versionCode' and 'ios-CFBundleVersion' fields for additional versioning in the config.xml file.
 
+## Usage
+
+By default this hook is enabled for all builds
+
+For only incrementing release build numbers, comment out line 17 in scripts/incrementBuildNum.js and uncomment line 18
+
 ### Version Format
 
 Android:
