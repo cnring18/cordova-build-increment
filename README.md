@@ -38,3 +38,7 @@ iOS:
 ** Leading zeros will be removed
 
 ** The hook will not currently increment any build versions without the formats above
+
+
+
+Apologies for quick releases/updates. This is my first venture and expirementation with npm, git, and cordova modules!
