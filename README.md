@@ -41,4 +41,4 @@ iOS:
 
 
 
-Apologies for quick releases/updates. This is my first venture and expirementation with npm, git, and cordova modules!
+Apologies for quick releases/updates. This is my first venture and experimentation with npm, git, and cordova modules!
