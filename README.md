@@ -14,4 +14,19 @@ Then add the following to your app's config.xml file:
 
 Script is designed to increment the 'android-versionCode' and 'ios-CFBundleVersion' fields for additional versioning in the config.xml file.
 
-**Works only for numbered builds in the form 'XX', 'XX.XX' or 'XX.XX.XX'
+### Version Format
+
+Android:
+
+'X'
+
+ - Cordova will throw an error if 'android-versionCode' is not an integer value
+
+iOS:
+
+'X' 'X.X' 'X.X.X'
+
+
+** Leading zeros will be removed
+
+** The hook will not currently increment any build versions without the formats above
