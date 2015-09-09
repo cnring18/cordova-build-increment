@@ -22,13 +22,13 @@ For only incrementing release build numbers, comment out line 17 in scripts/incr
 
 ### Version Format
 
-######Android:
+#####Android:
 
 'X'
 
  - Cordova will throw an error if 'android-versionCode' is not an integer value
 
-######iOS:
+#####iOS:
 
 'X' 
 
@@ -36,7 +36,7 @@ For only incrementing release build numbers, comment out line 17 in scripts/incr
 
 'X.X.X'
 
-######Windows:
+#####Windows:
 
 'X.X.X.X'
 
