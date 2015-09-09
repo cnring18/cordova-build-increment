@@ -1,6 +1,6 @@
 {
   "name": "cordova-build-increment",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Automated build number increment after cordova build for iOS and Android",
   "main": "incrementBuildNum.js",
   "peerDependencies": {
