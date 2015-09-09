@@ -41,6 +41,3 @@ iOS:
 
 ** The hook will not currently increment any build versions without the formats above
 
-
-
-Apologies for quick releases/updates. This is my first venture and experimentation with npm, git, and cordova modules!
