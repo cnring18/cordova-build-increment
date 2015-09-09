@@ -56,8 +56,11 @@ module.exports = function(context) {
                 changeVersion = 'ios-CFBundleVersion';
                 platformName = 'iOS';
                 break;
+            case 'windows':
+                changeVersion = 'windows-packageVersion';
+                platformName = 'Windows';
             default:
-                console.log('This hook only supports android and ios currently, ' + platform + ' not supported');
+                console.log('This hook only supports android, ios, and windows currently, ' + platform + ' not supported');
                 return false;
         }
         return true;
