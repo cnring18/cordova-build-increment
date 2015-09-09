@@ -3,6 +3,10 @@
   "version": "0.0.4",
   "description": "Automated build number increment after cordova build for iOS and Android",
   "main": "incrementBuildNum.js",
+  "dependencies": {
+    "xml-writer": "^1.6.0",
+    "xml2js": "^0.4.10"
+  },
   "peerDependencies": {
     "xml2js": "^0.4.10",
     "xml-writer": "^1.6.0"
@@ -25,13 +29,13 @@
     "url": "https://github.com/cnring18/cordova-build-increment/issues"
   },
   "homepage": "https://github.com/cnring18/cordova-build-increment#readme",
-  "dependencies": {
-    "xml-writer": "^1.6.0",
-    "xml2js": "^0.4.10"
-  },
   "keywords": [
+    "build",
     "cordova",
+    "cordova-build",
     "hooks",
-    "hook"
+    "hook",
+    "version",
+    "versioning"
   ]
 }
