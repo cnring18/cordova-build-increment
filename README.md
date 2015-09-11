@@ -1,8 +1,9 @@
 # cordova-build-increment
 
-###Release Notes
 
-v0.0.4 now supports versioning for Windows with 'windows-packageVersion' in config.xml
+### Release Notes
+
+v0.0.5 now supports versioning for Windows with 'windows-packageVersion' in config.xml
 
 
 ## Install
@@ -27,13 +28,15 @@ For only incrementing release build numbers, comment out line 17 in scripts/incr
 
 ### Version Format
 
-#####Android:
+
+##### Android:
 
 'X'
 
  - Cordova will throw an error if 'android-versionCode' is not an integer value
 
-#####iOS:
+
+##### iOS:
 
 'X' 
 
@@ -41,7 +44,8 @@ For only incrementing release build numbers, comment out line 17 in scripts/incr
 
 'X.X.X'
 
-#####Windows:
+
+##### Windows:
 
 'X.X.X.X'
 
