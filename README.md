@@ -1,5 +1,10 @@
 # cordova-build-increment
 
+###Release Notes
+
+v0.0.4 now supports versioning for Windows with 'windows-packageVersion' in config.xml
+
+
 ## Install
 Install the following package below inside of your apps root folder.
 ```bash
@@ -43,5 +48,5 @@ For only incrementing release build numbers, comment out line 17 in scripts/incr
 
 ** Leading zeros no longer removed
 
-** The hook will not currently increment any build versions without the formats above (Non-digit build codes)
+** The hook will not currently increment any build versions without the formats above 
 
