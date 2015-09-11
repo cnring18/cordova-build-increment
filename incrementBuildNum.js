@@ -94,8 +94,6 @@ module.exports = function(context) {
         var newCode = code.replace(/[0-9]+$/, newVersion);
         if (newCode == code) return null; //Version not changed, no match
         return newCode;
-
-
     }
 
     function newVersion(match, offset, original) {
