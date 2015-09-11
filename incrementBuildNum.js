@@ -59,6 +59,7 @@ module.exports = function(context) {
             case 'windows':
                 changeVersion = 'windows-packageVersion';
                 platformName = 'Windows';
+                break;
             default:
                 console.log('This hook only supports android, ios, and windows currently, ' + platform + ' not supported');
                 return false;
@@ -90,10 +91,30 @@ module.exports = function(context) {
 
     function processVersionCode(code) {
         if (!code) return null;
-        var codeNum = code.match(/\.?([0-9]+)$/);
-        if (!codeNum || !codeNum[1]) return null;
-        codeNum = parseInt(codeNum[1]) + 1;
-        code = code.replace(/[0-9]+$/, codeNum + '');
+        var newCode = code.replace(/[0-9]+$/, newVersion);
+        if (newCode == code) return null; //Version not changed, no match
+        return newCode;
+
+
+    }
+
+    function newVersion(match, offset, original) {
+        if(!match) return null;
+        try {
+            var l = match.length;
+            match = parseInt(match) + 1;
+            return pad(match, l);
+        } catch (e) {
+            return null;
+        }
+    }
+
+    function pad(code, origLen) {
+        code = code.toString();
+        if (code.length == origLen) return code;
+        while(code.length < origLen) {
+            code = '0' + code;
+        }
         return code;
     }
 }
