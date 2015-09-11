@@ -71,13 +71,14 @@ module.exports = function(context) {
         var newVersion =  null;
         if(result.widget.$[changeVersion]) { 
             newVersion = processVersionCode(result.widget.$[changeVersion]);
-            result.widget.$[changeVersion] = newVersion;
+            if (newVersion) result.widget.$[changeVersion] = newVersion;
+            else finishMessage.push(platformName + ' version code still "' + result.widget.$[changeVersion] + '"');
         } else {
             finishMessage.push(platformName + ' version code not found');
         }
         if(newVersion) {
             needRewrite = true;
-            finishMessage.push(platformName + ' build number incremented to ' + newVersion);
+            finishMessage.push(platformName + ' build number incremented to "' + newVersion + '"');
         }
         return result;
     }
@@ -109,7 +110,7 @@ module.exports = function(context) {
 
     function pad(code, origLen) {
         code = code.toString();
-        if (code.length == origLen) return code;
+        if (code.length >= origLen) return code;
         while(code.length < origLen) {
             code = '0' + code;
         }
