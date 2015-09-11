@@ -41,7 +41,7 @@ For only incrementing release build numbers, comment out line 17 in scripts/incr
 'X.X.X.X'
 
 
-** Leading zeros will be removed
+** Leading zeros no longer removed
 
-** The hook will not currently increment any build versions without the formats above
+** The hook will not currently increment any build versions without the formats above (Non-digit build codes)
 
