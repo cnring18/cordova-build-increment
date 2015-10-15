@@ -30,6 +30,7 @@
   },
   "homepage": "https://github.com/cnring18/cordova-build-increment#readme",
   "keywords": [
+    "ecosystem:cordova",
     "build",
     "cordova",
     "cordova-build",
