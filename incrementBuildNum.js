@@ -23,6 +23,7 @@ module.exports = function(context) {
     }
 
     fs.readFile(filePath, { encoding:'utf8' }, function(err, data) {
+        if(err) throw err;
         parser.parseString(data, function (err, result) {
             if(err) throw err;
 
