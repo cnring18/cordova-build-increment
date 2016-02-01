@@ -3,7 +3,7 @@
 
 ### Release Notes
 
-v0.0.5 now supports versioning for Windows with 'windows-packageVersion' in config.xml
+v0.0.6 Minor error handling changes. Tested up to cordova 6.0.0
 
 
 ## Install
@@ -50,7 +50,12 @@ For only incrementing release build numbers, comment out line 17 in scripts/incr
 'X.X.X.X'
 
 
-** Leading zeros no longer removed
+** Leading zeros not removed
 
 ** The hook will not currently increment any build versions without the formats above 
+
+
+### Release History
+
+v0.0.5 now supports versioning for Windows with 'windows-packageVersion' in config.xml
 
