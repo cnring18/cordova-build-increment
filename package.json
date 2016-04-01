@@ -1,7 +1,7 @@
 {
   "name": "cordova-build-increment",
-  "version": "0.0.6",
-  "description": "Automated build number increment after cordova build for iOS, Android, and Windows",
+  "version": "0.1.0",
+  "description": "Automated version number increment after cordova build for iOS, OS X, Android, and Windows",
   "main": "incrementBuildNum.js",
   "dependencies": {
     "xml-writer": "^1.6.0",
@@ -35,6 +35,7 @@
     "cordova",
     "cordova-build",
     "cordova-ios",
+    "cordova-osx",
     "cordova-android",
     "cordova-windows",
     "hooks",

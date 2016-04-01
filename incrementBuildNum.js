@@ -14,11 +14,12 @@ module.exports = function(context) {
         needRewrite = false,
         finishMessage = [];
     // hook configuration
-    var isRelease = true; // by default this hook is always enabled, see the line below on how to execute it only for release
-    //var isRelease = (cliCommand.indexOf('--release') > -1);
+    var increment = !(cliCommand.indexOf('--no-inc') > -1),
+        platformVersion = !(cliCommand.indexOf('--no-platform-inc') > -1),
+        incrementVersion = (cliCommand.indexOf('--inc-version') > -1);
 
-    if (!isRelease) {
-        console.log('Set to increment build number only for release');
+    if(!increment) {
+        console.log('--no-inc flag detected. No build increment executed.');
         return;
     }
 
@@ -27,17 +28,29 @@ module.exports = function(context) {
         parser.parseString(data, function (err, result) {
             if(err) throw err;
 
-            platforms.forEach(function (platform) {
-                if(setPlatformInfo(platform))
-                    result = handleResult(result);
-            });
-            if(needRewrite) {
-                rewriteConfig(result);
-            } else {
-                console.log(fileName + ' build numbers not changed');
-            }
+            parseConfig(result);
         });
     });
+
+    function parseConfig(configOpts) {
+        if (platformVersion) {
+            platforms.forEach(function (platform) {
+                if(setPlatformInfo(platform))
+                    configOpts = handleResult(configOpts);
+            });
+        } 
+        if (incrementVersion) {
+            changeVersion = 'version';
+            platformName = 'App';
+            configOpts = handleResult(configOpts);
+        }
+
+        if(needRewrite) {
+            rewriteConfig(configOpts);
+        } else {
+            console.log(fileName + ' build numbers not changed');
+        }
+    }
 
     function rewriteConfig(result) {
         fs.writeFile(filePath, buildXML(result), { encoding:'utf8' }, function(err) {
@@ -57,12 +70,16 @@ module.exports = function(context) {
                 changeVersion = 'ios-CFBundleVersion';
                 platformName = 'iOS';
                 break;
+            case 'osx':
+                changeVersion = 'osx-CFBundleVersion';
+                platformName = 'OS X';
+                break;
             case 'windows':
                 changeVersion = 'windows-packageVersion';
                 platformName = 'Windows';
                 break;
             default:
-                console.log('This hook only supports android, ios, and windows currently, ' + platform + ' not supported');
+                console.log('This hook supports Android, iOS, OS X, and Windows currently, ' + platform + ' not supported');
                 return false;
         }
         return true;
