@@ -3,7 +3,7 @@
 
 ### Release Notes
 
-v0.1.0 Added support for OS X `osx-CFBundleVersion` tag. Added `version` tag increment. Added command line option flags
+v0.1.0 Added support for OS X with `osx-CFBundleVersion` tag. Added `version` tag increment. Added command line option flags
 
 Tested up to cordova@6.1.0
 
