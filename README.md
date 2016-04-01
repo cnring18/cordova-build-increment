@@ -71,5 +71,6 @@ Use the following option flags when executing `cordova build`:
 ### Release History
 
 v0.0.6 Minor error handling changes. Tested up to cordova 6.0.0
+
 v0.0.5 Supports versioning for Windows with 'windows-packageVersion' in config.xml
 
